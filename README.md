@@ -1,6 +1,6 @@
 # Ecommerce Website (Django/javascript)
 
-![Django Ecommerce Store](https://github.com/omarreda22/Django-eCommerce-Store/blob/main/core/static/img/e_shop.PNG)
+
 
 Full-featured shopping cart with PayPal & credit/debit payments
 
@@ -13,7 +13,7 @@ Admin area to manage customers, products & orders
 Product search, carousel, pagination & more
 
 
-## View Full Video Demo On [Youtube](https://www.youtube.com/watch?v=lwWEabH0-lY)
+
 
 <br>
 
