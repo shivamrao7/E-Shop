@@ -1,0 +1,26 @@
+<div class="admin-stats">
+  <div class="stat-card">
+    <div class="stat-value">{{ total_products }}</div>
+    <div class="stat-label">Products</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ available_products }}</div>
+    <div class="stat-label">Available</div>
+  </div>
+  <div class="stat-card stat-warning">
+    <div class="stat-value">{{ low_stock }}</div>
+    <div class="stat-label">Low Stock (&le;5)</div>
+  </div>
+  {% if orders_count is not None %}
+  <div class="stat-card">
+    <div class="stat-value">{{ orders_count }}</div>
+    <div class="stat-label">Orders</div>
+  </div>
+  {% endif %}
+  {% if users_count is not None %}
+  <div class="stat-card">
+    <div class="stat-value">{{ users_count }}</div>
+    <div class="stat-label">Users</div>
+  </div>
+  {% endif %}
+</div>

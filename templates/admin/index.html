@@ -1,0 +1,36 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div class="admin-dashboard">
+  <div class="dashboard-hero">
+    <h1>Welcome, {{ user.get_full_name|default:user.username }}</h1>
+    <p class="muted">Manage products, orders, users and site content from here.</p>
+    <div class="quick-actions">
+      <a class="button" href="{% url 'admin:shop_product_add' %}">+ Add Product</a>
+      <a class="button secondary" href="{% url 'admin:orders_order_changelist' %}">View Orders</a>
+      <a class="button secondary" href="{% url 'admin:accounts_account_changelist' %}">Users</a>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div style="grid-column:1/-1">
+      {% load admin_stats %}
+      {% get_admin_stats %}
+    </div>
+    {% for app in app_list %}
+      <div class="app-card">
+        <h3>{{ app.name }}</h3>
+        <ul class="model-list">
+          {% for model in app.models %}
+            <li>
+              <a href="{{ model.admin_url }}">{{ model.name }}</a>
+              {% if model.add_url %}<a class="small-link" href="{{ model.add_url }}">+ Add</a>{% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

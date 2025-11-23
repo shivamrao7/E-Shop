@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.title }} - E-SHOP{% endblock title %}
+
+{% block content %}
+<div class="page-hero" style="padding:40px 0 30px; background: linear-gradient(180deg, rgba(38,31,64,0.85), rgba(38,31,64,0.6));">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 style="color:#fff">{{ post.title }}</h1>
+        <p class="lead" style="color:rgba(255,255,255,0.9)">By {{ post.author }} · {{ post.published_at|date:"F d, Y" }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top:24px">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="post-body" style="padding:24px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06)">
+        {% if post.featured_image %}
+          <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" style="width:100%;height:auto;border-radius:8px;margin-bottom:16px"/>
+        {% endif %}
+        <div class="content">
+          {{ post.content|linebreaks }}
+        </div>
+      </div>
+    </div>
+    <aside class="col-sm-4">
+      <div class="panel" style="padding:18px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06)">
+        <h4>About the author</h4>
+        <p>{{ post.author }}</p>
+        <h4>Share</h4>
+        <p>
+          <a class="btn btn-ghost btn-xs" href="#">Twitter</a>
+          <a class="btn btn-ghost btn-xs" href="#">Facebook</a>
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% endblock content %}

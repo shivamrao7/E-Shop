@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div class="login-wrap">
+  <div class="login-card">
+    <div class="brand">
+      <a href="/admin/" class="logo">E-Shop<span class="accent">Admin</span></a>
+    </div>
+    {% if form.errors %}
+      <p class="error">{{ form.errors|striptags }}</p>
+    {% endif %}
+    <form action="" method="post" id="login-form">{% csrf_token %}
+      <div class="form-row">{{ form.username.label_tag }} {{ form.username }}</div>
+      <div class="form-row">{{ form.password.label_tag }} {{ form.password }}</div>
+      <div class="form-row submit-row"> <input type="submit" value="Log in" class="button" /> </div>
+    </form>
+    <p class="help muted">Use your admin account to manage the store.</p>
+  </div>
+</div>
+{% endblock %}

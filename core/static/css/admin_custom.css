@@ -1,0 +1,182 @@
+/* Admin panel custom styles - professional theme for E-Shop admin */
+
+:root{
+  --es-bg:#f7f6f8;
+  --es-primary:#2b1e2b;
+  --es-accent:#d99879;
+  --es-success:#28a745;
+  --es-muted:#6b5b63;
+}
+
+/* Header / branding */
+header#header {
+  background: linear-gradient(90deg,var(--es-primary), #4a3446);
+  color: #fff;
+}
+.branding .logo {
+  font-weight:800; font-size:20px; letter-spacing:1px; color:#fff;
+}
+.branding .logo .accent { color: var(--es-accent); margin-left:6px; }
+
+/* Make the main content area slightly lighter */
+body#admin-body { background: var(--es-bg); }
+
+/* Cards on the index */
+.dashboard-module { background:#fff; border-radius:10px; box-shadow:0 6px 20px rgba(10,8,15,0.06); border:0; padding:18px }
+.dashboard-module h2 { color:var(--es-primary); font-size:16px; margin-bottom:10px }
+
+/* Model list table tweaks */
+.app-list .model { background:#fff; border-radius:8px; padding:10px; margin-bottom:10px; box-shadow:0 4px 14px rgba(10,8,15,0.04) }
+table.admin-table { background:#fff }
+th.model-column, th { background: transparent; color:var(--es-muted); font-weight:700 }
+td, th { padding:10px 12px }
+tr.row2:hover, tr:hover { background: rgba(217,152,121,0.03) }
+
+/* Buttons */
+.btn, .default, .button { background: var(--es-primary); color: #fff; border-radius:8px; border:0; padding:6px 12px }
+.button:hover, .btn:hover { background: #432e3a }
+
+/* Badges used in ModelAdmin short display methods look better with rounded pill */
+.es-badge { display:inline-block; padding:4px 8px; border-radius:999px; color:#fff; font-size:12px }
+.es-badge--ok { background:var(--es-success) }
+.es-badge--warn { background:#ffc107; color:#222 }
+.es-badge--danger { background:#dc3545 }
+
+/* Fieldset and inlines */
+fieldset.module { background:#fff; border-radius:8px; padding:12px; box-shadow:0 4px 12px rgba(10,8,15,0.03); border:0 }
+.inline-related { background:transparent }
+
+/* Change form header */
+.change-form h1, .change-form h2 { color: var(--es-primary); font-weight:700 }
+.object-tools .button { border-radius:8px }
+
+/* Image preview for product and profile fields */
+.inline-related img, .field img, .readonly img { border-radius:8px; max-height:120px; object-fit:cover }
+
+/* Tighter control rows */
+.form-row { padding:10px 0 }
+
+/* Floating helper labels */
+.help { color:var(--es-muted); font-size:13px }
+
+/* Responsive tweaks for smaller admin screens */
+@media (max-width:900px){
+  .branding .logo { font-size:18px }
+  .dashboard-module { padding:12px }
+  td, th { padding:8px }
+}
+
+/* Login page tweaks */
+.login .login-box { border-radius:12px; box-shadow:0 12px 40px rgba(10,8,15,0.08); overflow:hidden }
+.login h1 a { font-weight:800; color:var(--es-primary) }
+
+/* Dashboard layout */
+.admin-dashboard { max-width:1100px; margin:22px auto; padding:18px }
+.dashboard-hero { background: linear-gradient(90deg, rgba(43,30,43,0.98), rgba(74,52,70,0.92)); color:#fff; padding:22px; border-radius:12px }
+.dashboard-hero h1 { margin:0 0 6px; font-size:22px }
+.dashboard-hero .muted { opacity:0.9 }
+.quick-actions { margin-top:12px }
+.quick-actions .button { margin-right:8px }
+
+.dashboard-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:14px; margin-top:18px }
+.app-card { background:#fff; padding:14px; border-radius:10px; box-shadow:0 6px 24px rgba(10,8,15,0.06) }
+.app-card h3 { margin:0 0 8px; color:var(--es-primary) }
+.app-card .model-list { list-style:none; margin:0; padding:0 }
+.app-card .model-list li { padding:6px 0; display:flex; justify-content:space-between; align-items:center }
+.app-card .model-list li a { color:#2b1e2b }
+.app-card .model-list li .small-link { font-size:12px; color:var(--es-accent) }
+
+/* Login card styling */
+.login-wrap { display:flex; align-items:center; justify-content:center; min-height:70vh }
+.login-card { width:420px; background:#fff; padding:26px; border-radius:12px; box-shadow:0 24px 60px rgba(10,8,15,0.12) }
+.login-card .brand { text-align:center; margin-bottom:12px }
+.login-card .logo { font-weight:800; font-size:22px }
+.login-card .accent { color:var(--es-accent); margin-left:6px }
+.login-card .form-row { margin-bottom:12px }
+.login-card input[type="text"], .login-card input[type="password"] { width:100%; padding:10px 12px; border:1px solid #e6e6e6; border-radius:6px }
+.login-card .error { color:#dc3545; margin-bottom:8px }
+.login-card .help { margin-top:10px; font-size:13px }
+
+/* Admin stats cards */
+.admin-stats { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px }
+.admin-stats .stat-card { background:#fff !important; padding:12px 16px; border-radius:10px; box-shadow:0 6px 20px rgba(10,8,15,0.06); min-width:140px }
+.admin-stats .stat-card .stat-value { font-weight:800; color:#2b1e2b !important; font-size:28px !important }
+.admin-stats .stat-card .stat-label { color:#6b5b63 !important; font-size:14px !important; font-weight:600 !important; margin-top:4px }
+.admin-stats .stat-card.stat-warning { border-left:4px solid #ffc107 }
+
+/* Dark-UI: make the admin background dark and cards translucent for a professional look */
+html body#admin-body, body#admin-body {
+  background: linear-gradient(180deg,#0f1720 0%, #1b2230 100%) !important;
+  color: #e6eef8 !important;
+}
+
+/* Make main content transparent so page background shows through */
+#content, .container, .admin-dashboard, .dashboard-grid {
+  background: transparent !important;
+}
+
+/* Cards and modules use translucent panels */
+.app-card, .dashboard-module, .stat-card, fieldset.module, .module, .change-form, .login-card {
+  background: rgba(255,255,255,0.03) !important;
+  color: #e6eef8 !important;
+  border: 1px solid rgba(255,255,255,0.03) !important;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6) !important;
+}
+
+/* Tables in admin should be dark and readable */
+table#result_list, table.admin-table {
+  background: rgba(255,255,255,0.02) !important;
+  color: #e6eef8 !important;
+  border-color: rgba(255,255,255,0.04) !important;
+}
+table#result_list thead th, table.admin-table thead th { color: #dbe7ff !important }
+
+/* Links and headings */
+a, .app-card .model-list li a { color: #cbd5e1 !important }
+th, .change-form h1, .app-card h3 { color: #ffffff !important }
+
+/* Buttons: use accent on dark background */
+.button, .submit-row .button, .object-tools .deletelink { background: var(--es-accent) !important; color: #1c1b20 !important }
+.button.secondary, .object-tools .button.secondary { background: rgba(255,255,255,0.04) !important; color: #cbd5e1 !important }
+
+/* Ensure login page looks good on dark background */
+.login-wrap { background: transparent !important }
+.login-card { background: rgba(255,255,255,0.03) !important; color:#e6eef8 !important }
+
+
+
+/* Small helpers to keep contrast with site palette */
+.submit-row .button.accent { background: var(--es-accent); }
+
+/* Strong overrides to ensure visible branding in admin (use !important to beat default admin specificity) */
+html body#admin-body { background: var(--es-bg) !important; }
+header#header { background: linear-gradient(90deg,var(--es-primary), #4a3446) !important; box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important }
+.branding .logo, .branding .logo a, h1#site-name a { color: #fff !important; font-weight:800 !important }
+.branding .logo .accent { color: var(--es-accent) !important }
+
+/* Make the index app blocks very card-like */
+.app-list .model { background:#fff !important; border-radius:12px !important; padding:12px !important; box-shadow:0 8px 30px rgba(10,8,15,0.06) !important }
+.dashboard-module, .module, .app-dashboard { background:#fff !important }
+
+/* Make action buttons stand out */
+.button, .submit-row .button, .object-tools .deletelink { background: var(--es-primary) !important; color:#fff !important; border-radius:8px !important; border:0 !important }
+.button.secondary, .object-tools .button.secondary { background:#fff !important; color:var(--es-primary) !important; border:1px solid rgba(0,0,0,0.06) !important }
+
+/* Table row hover and header emphasis */
+table#result_list tbody tr:hover { background: rgba(217,152,121,0.04) !important }
+table#result_list thead th { color: var(--es-primary) !important; font-weight:700 !important }
+
+/* Make change form titles and fieldsets pop */
+.change-form h1, .change-form h2 { color: var(--es-primary) !important; font-weight:800 !important }
+fieldset.module { border:0 !important; box-shadow:0 8px 30px rgba(10,8,15,0.04) !important }
+
+/* Image previews and inline lists */
+.inline-related img, .field img, .readonly img { border-radius:8px !important; max-height:160px !important; object-fit:cover !important }
+
+/* Tighten spacing for a modern, dense admin */
+.module .form-row, .form-row { padding:8px 0 !important }
+
+/* Login page stronger branding */
+.login .login-box { border-radius:12px !important; box-shadow:0 24px 60px rgba(10,8,15,0.12) !important; overflow:hidden !important }
+.login h1 a { color:var(--es-primary) !important; font-weight:800 !important }
+

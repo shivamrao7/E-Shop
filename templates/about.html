@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}About Us - E-SHOP{% endblock title %}
+
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(180deg, rgba(38,31,64,0.85), rgba(38,31,64,0.6)), url('https://via.placeholder.com/1600x500/34495e/ffffff?text=About+Us')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>About E-SHOP</h1>
+                <p class="lead">Crafting a thoughtful selection of products with design, durability and sustainability in mind.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>Our Story</h2>
+            <p>Started as a small curated store, E-SHOP has grown into a brand that values longevity, honest materials and clear product storytelling. We partner with makers who meet our quality standards and treat people fairly.</p>
+
+            <h2 class="mt-4">Our Mission</h2>
+            <p>Provide customers with products that look good, perform well, and minimise environmental impact through smarter choices.</p>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="num">10k+</div>
+                    <div class="muted">Happy customers</div>
+                </div>
+                <div class="stat">
+                    <div class="num">500+</div>
+                    <div class="muted">Products curated</div>
+                </div>
+                <div class="stat">
+                    <div class="num">8</div>
+                    <div class="muted">Years in business</div>
+                </div>
+            </div>
+
+            <h2 class="mt-4">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/240/ffffff/333333?text=S.R" alt="Shivam Rao">
+                    <h5>Shivam Rao</h5>
+                    <p class="role">Founder &amp; CEO</p>
+                    <p>Drives product direction and design strategy.</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/240/ffffff/333333?text=P.S" alt="Priya Sharma">
+                    <h5>Priya Sharma</h5>
+                    <p class="role">Operations</p>
+                    <p>Ensures product quality and reliable fulfillment.</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/240/ffffff/333333?text=A.K" alt="Alex Kim">
+                    <h5>Alex Kim</h5>
+                    <p class="role">Customer Experience</p>
+                    <p>Leads customer support and feedback initiatives.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="col-sm-4">
+            <div class="panel blog-sidebar">
+                <h4>Contact</h4>
+                <p>Questions, collaborations or press? Reach out at <a href="mailto:info@example.com">info@example.com</a>.</p>
+                <a href="{% url 'shop:contact' %}" class="btn btn-cta">Get in touch</a>
+            </div>
+
+            <div class="panel blog-sidebar">
+                <h4>Values</h4>
+                <ul>
+                    <li>Quality first</li>
+                    <li>Transparent sourcing</li>
+                    <li>Customer care</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div>
+
+{% endblock content %}
